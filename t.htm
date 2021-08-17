@@ -1,0 +1,433 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+    <link href="https://fonts.googleapis.com/css2?family=Manrope:wght@700;800&display=swap" rel="stylesheet" />
+    <link rel="stylesheet" href="src/css/style.css" />
+
+    <style>
+        html {
+            cursor: pointer;
+            overflow: hidden;
+        }
+        
+        body {
+            overflow: hidden;
+            cursor: pointer;
+            font-family: montserrat;
+            background-color: #fff;
+            color: #000;
+        }
+        
+        .header {
+            margin: 1rem 5rem;
+            height: 5rem;
+            display: flex;
+            justify-content: space-between;
+            background: #fff;
+            align-items: center;
+        }
+        
+        .navlinks-wrapper {
+            width: 40%;
+            align-items: center;
+            font-size: 1.2rem;
+            color: #0009;
+            text-transform: lowercase;
+            letter-spacing: 1px;
+        }
+        
+        .navlinks {
+            align-items: center;
+            display: flex;
+            justify-content: space-evenly;
+        }
+        
+        .e3_7 {
+            background-color: #000;
+            color: #fff;
+            border-radius: 4px;
+            box-shadow: 1px 1px 40px 10px #00000010;
+            font-weight: 600;
+            background: linear-gradient( 180deg, rgba(25, 25, 25, 1) 28%, rgba(15, 0, 0, 1) 100%);
+            padding: 0.7rem 2rem;
+        }
+        
+        .logo {
+            text-shadow: 1px 1px 40px #00000010;
+            font-weight: 900;
+            font-size: 2rem;
+            background: linear-gradient( 180deg, rgba(75, 75, 75, 1) 28%, rgba(21, 20, 20, 1) 100%);
+            -webkit-text-fill-color: transparent;
+            background-clip: text;
+            -webkit-background-clip: text;
+        }
+        
+        .cta-text {
+            display: block;
+            color: #000;
+            font-family: manrope;
+            font-size: 6rem;
+            letter-spacing: 2px;
+            text-transform: lowercase;
+        }
+        
+        .cta-text.gradient {
+            background: linear-gradient( 180deg, rgba(75, 75, 75, 1) 28%, rgba(21, 20, 20, 1) 100%);
+            -webkit-text-fill-color: transparent;
+            background-clip: text;
+            -webkit-background-clip: text;
+            margin-bottom: 10rem;
+        }
+        
+        html.has-scroll-smooth {
+            overflow: hidden;
+        }
+        
+        html.has-scroll-dragging {
+            -webkit-user-select: none;
+            -moz-user-select: none;
+            -ms-user-select: none;
+            user-select: none;
+        }
+        
+        .has-scroll-smooth body {
+            overflow: hidden;
+        }
+        
+        .has-scroll-smooth [data-scroll-container] {
+            min-height: 100vh;
+        }
+        
+        [data-scroll-direction="horizontal"] [data-scroll-container] {
+            height: 100vh;
+            display: inline-block;
+            white-space: nowrap;
+        }
+        
+        [data-scroll-direction="horizontal"] [data-scroll-section] {
+            display: inline-block;
+            vertical-align: top;
+            white-space: nowrap;
+            height: 100%;
+        }
+        
+        .c-scrollbar {
+            position: absolute;
+            right: 0;
+            top: 0;
+            width: 11px;
+            height: 100%;
+            transform-origin: center right;
+            transition: transform 0.3s, opacity 0.3s;
+            opacity: 0;
+        }
+        
+        .c-scrollbar:hover {
+            transform: scaleX(1.45);
+        }
+        
+        .c-scrollbar:hover,
+        .has-scroll-scrolling .c-scrollbar,
+        .has-scroll-dragging .c-scrollbar {
+            opacity: 1;
+        }
+        
+        [data-scroll-direction="horizontal"] .c-scrollbar {
+            width: 100%;
+            height: 10px;
+            top: auto;
+            bottom: 0;
+            transform: scaleY(1);
+        }
+        
+        [data-scroll-direction="horizontal"] .c-scrollbar:hover {
+            transform: scaleY(1.3);
+        }
+        
+        .c-scrollbar_thumb {
+            position: absolute;
+            top: 0;
+            right: 0;
+            background-color: black;
+            opacity: 0.5;
+            width: 7px;
+            border-radius: 10px;
+            margin: 2px;
+            cursor: -webkit-grab;
+            cursor: grab;
+        }
+        
+        .has-scroll-dragging .c-scrollbar_thumb {
+            cursor: -webkit-grabbing;
+            cursor: grabbing;
+        }
+        
+        [data-scroll-direction="horizontal"] .c-scrollbar_thumb {
+            right: auto;
+            bottom: 0;
+        }
+        
+        .work-section {}
+        
+        .progress {
+            height: 5px;
+            background-color: #000;
+        }
+        
+        .about-section>div:nth-child(1) {
+            color: #0006;
+            width: 50%;
+            padding: 5rem 5rem;
+            padding-left: 0;
+            font-family: 1rem;
+            padding-top: 4rem;
+            letter-spacing: 1px;
+        }
+        
+        .highlighted {
+            color: #000;
+            filter: contrast(1);
+            background: linear-gradient( 180deg, rgba(25, 25, 25, 1) 28%, rgba(15, 0, 0, 1) 100%);
+            display: inline;
+            -webkit-text-fill-color: transparent;
+            background-clip: text;
+            -webkit-background-clip: text;
+        }
+        
+        .about-section {
+            display: flex;
+            justify-content: space-between;
+        }
+        
+        .reach-to-me {
+            display: flex;
+            flex-direction: row;
+            justify-content: space-between;
+            width: 40%;
+            margin-bottom: 4rem;
+        }
+        
+        .reach-to-me>div:nth-child(1) {
+            width: 80%;
+            background-color: #838883;
+        }
+        
+        .reach-to-me>div:nth-child(2) {
+            width: 20%;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            color: #000;
+            font-size: 3rem;
+        }
+        
+        .text-90deg {
+            font-weight: 900;
+            font-family: montserrat;
+            transform: rotateZ(90deg);
+        }
+        
+        .work-section {
+            height: 450vh;
+            display: grid;
+            padding: 5rem;
+            grid-template-rows: repeat(4, 1fr);
+        }
+        
+        .work-wrapper {
+            z-index: 25;
+            margin: 5vh 0vh;
+            display: grid;
+            grid-template-columns: 1fr 1fr;
+        }
+        
+        .work-container {
+            display: flex;
+            justify-content: flex-start;
+        }
+        
+        .justified-end {
+            justify-content: flex-start;
+            align-items: flex-end;
+        }
+        
+        .work-container>img {
+            max-height: 60%;
+        }
+        
+        .contact-section {
+            height: 100vh;
+            display: grid;
+            background: #fff;
+            font-family: South Amsterdam demo;
+            grid-template-columns: 1fr 1fr;
+            color: #000;
+            text-transform: uppercase;
+        }
+        
+        .contact-text {
+            padding: 4rem;
+            color: #fff;
+            justify-content: center;
+            display: grid;
+            align-items: center;
+            align-items: center;
+            font-size: 4rem;
+            background-size: cover;
+        }
+        
+        .contact-text>div {
+            display: flex;
+            justify-content: center;
+            align-items: center;
+        }
+        
+        .social-text {
+            display: flex;
+            justify-content: center;
+            font-size: 4rem;
+            text-align: left;
+            flex-direction: column;
+        }
+        
+        .social-links {
+            margin: 1rem;
+            margin-right: 6rem;
+            border-bottom: 1px solid rgba(75, 75, 75, 1);
+        }
+        
+        .titel {
+            font-size: 5rem;
+            color: #fff;
+            text-transform: uppercase;
+        }
+    </style>
+</head>
+
+<body data-scroll data-scroll-container data-scroll-speed=".5" class="scrollContainer">
+    <div class="header">
+        <span class="logo">PIXEERS .</span>
+        <div class="navlinks-wrapper">
+            <div class="navlinks">
+                <span class="e3">Culture</span>
+                <span class="e3">Blog</span>
+                <span class="e3">Work</span>
+                <span class="e3_7 button">Contact</span>
+            </div>
+        </div>
+    </div>
+    <div class="container">
+        <div class="e16_2" data-scroll-direction="horizontal">
+            <span class="cta-text">rudra</span>
+            <span class="cta-text">narayan.</span>
+            <span class="cta-text">FRONTEND</span>
+            <span class="cta-text">developer . </span>
+
+            <span class="cta-text">Loves to write</span>
+            <span class="cta-text gradient">css and javascript</span>
+            <span class="cta-text">having 3 years </span>
+            <span class="cta-text gradient">of experience </span>
+        </div>
+        <div class="about-section">
+            <div>
+                Lorem,
+                <div class="highlighted">dolor sit amet</div>
+                consectetur
+                <div class="highlighted">adipisicing eli</div>
+                t. Eligendi numquam atque dolorum,
+                <div class="highlighted">perspiciatis dic</div>
+                ta sit officiis quisquam fuga quis fugiat tenetur totam delectus ducimus,
+                <div class="highlighted">error voluptatem</div>
+                quaerat ut. Maxime, magni? Lorem,
+                <div class="highlighted">dolor sit amet</div>
+                consectetur
+                <div class="highlighted">adipisicing eli</div>
+                t. Eligendi numquam atque dolorum,
+                <div class="highlighted">perspiciatis dic</div>
+                ta sit officiis quisquam fuga quis fugiat tenetur totam delectus ducimus,
+                <div class="highlighted">error voluptatem</div>
+                quaerat ut. Maxime, magni?
+            </div>
+            <div class="reach-to-me" data-scroll data-scroll-speed="11">
+                <div class="social-icons-wrapper"></div>
+                <div>
+                    <div class="text-90deg">Follow</div>
+                </div>
+            </div>
+        </div>
+
+
+    </div>
+    <div class="work-section">
+        <div class="work-wrapper">
+            <div class="work-container justified-end">
+                <img src="src/img/wallpaper-4.jpg" alt="" data-scroll data-scroll-speed="13.8" />
+            </div>
+            <div class="work-container">
+                <img src="src/img/wallpaper-4.jpg" alt="" data-scroll data-scroll-speed="25" />
+            </div>
+        </div>
+        <div class="work-wrapper">
+            <div class="work-container justified-end">
+                <img src="src/img/wallpaper-4.jpg" alt="" data-scroll data-scroll-speed="17.1" />
+            </div>
+            <div class="work-container">
+                <img src="src/img/wallpaper-4.jpg" alt="" data-scroll data-scroll-speed="29" />
+            </div>
+        </div>
+        <div class="work-wrapper">
+            <div class="work-container justified-end">
+                <img src="src/img/wallpaper-4.jpg" alt="" data-scroll data-scroll-speed="27.8" />
+            </div>
+            <div class="work-container">
+                <img src="src/img/wallpaper-4.jpg" alt="" data-scroll data-scroll-speed="23.4" />
+            </div>
+        </div>
+        <div class="work-wrapper">
+            <div class="work-container justified-end">
+                <img src="src/img/wallpaper-4.jpg" alt="" data-scroll data-scroll-speed="5.4" />
+            </div>
+            <div class="work-container">
+                <img src="src/img/wallpaper-4.jpg" alt="" data-scroll data-scroll-speed="11.8" />
+            </div>
+        </div>
+
+    </div>
+
+    <div class="horizontal-scroll" data-scroll-call="change_color()">
+        <div class="contact-section">
+            <div class="contact-text" data-scroll data-scroll-speed="5" data-scroll-direction="vertical">
+                <div class="">feel free to <br> contact me .</div>
+            </div>
+
+            <div class="social-text" data-scroll data-scroll-container data-scroll-speed="5" data-scroll-direction="horizontal">
+                <div class="social-links">
+                    <div class="titel">Instagram.</div>
+                </div>
+                <div class="social-links">
+                    <div class="titel">Github.</div>
+                </div>
+                <div class="social-links">
+                    <div class="titel">Dribble.</div>
+                </div>
+                <div class="social-links">
+                    <div class="titel">Twitter.</div>
+                </div>
+            </div>
+        </div>
+    </div>
+</body>
+<script src="src/js/jquery.min.js"></script>
+<script src="src/js/smooth-scroll.js"></script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.7.1/gsap.min.js" integrity="sha512-UxP+UhJaGRWuMG2YC6LPWYpFQnsSgnor0VUF3BHdD83PS/pOpN+FYbZmrYN+ISX8jnvgVUciqP/fILOXDjZSwg==" crossorigin="anonymous" referrerpolicy="no-referrer"></script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.7.1/ScrollTrigger.min.js" integrity="sha512-DlTk2PLUinhBupE89kHOJTt11QqbRMQVlbb26XVDvp4D1kt0fRvQJslvZnTelRJHq6yK0tIPCR7cul8+9Blz0g==" crossorigin="anonymous" referrerpolicy="no-referrer"></script>
+<script src="src/js/script.js"></script>
+<script>
+</script>
+
+</html>

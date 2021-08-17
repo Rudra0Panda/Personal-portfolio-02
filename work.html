@@ -1,0 +1,175 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Manrope:wght@600;800&display=swap"
+      rel="stylesheet"
+    />
+    <script src="https://code.iconify.design/1/1.0.7/iconify.min.js"></script>
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="stylesheet" href="src/css/style.css" />
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/slick-carousel/1.8.1/slick.min.css"
+    />
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/slick-carousel/1.8.1/slick-theme.min.css"
+    />
+    <style>
+      .container {
+        padding: 1vw;
+        height: 100vh;
+        max-height: 100vh;
+        color: #000;
+        display: grid;
+        font-family: "Manrope", sans-serif;
+        grid-template-rows: 0.3fr 1.6fr 0.3fr;
+      }
+      .soc {
+        display: flex;
+        flex-direction: row;
+      }
+      .soc > span {
+        margin-left: 16px;
+      }
+      .page-content-wrapper {
+        display: grid;
+        margin: 0vh 5vw;
+        grid-template-columns: 0.4fr 1.3fr 0.2fr;
+      }
+      .your-class {
+        display: flex !important;
+        flex-direction: row;
+      }
+      .your-class > div {
+        height: 400px;
+        width: 600px;
+      }
+      .image-wrapper {
+        display: flex;
+        justify-content: flex-end;
+      }
+      li:nth-child(2) {
+      }
+      li:nth-child(2) > div:nth-child(1) {
+        font-size: 100px;
+        position: absolute;
+        z-index: 1;
+        top: 25%;
+        color: #000;
+        font-weight: 800;
+        letter-spacing: -2px;
+        line-height: 96px;
+      }
+      .slider-navigation {
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+      }
+      #text-change , .text-change {
+        position: relative;
+        font-size: 20px;
+        display: inline;
+      }
+    </style>
+    <title>co-Rex | works</title>
+  </head>
+  <body>
+    <div class="cursor"></div>
+    <div class="overlay">
+      <li></li>
+      <li>
+        <div>        <div>
+          Uno <br/>
+          Agency
+        </div>
+       
+       <div class="text-change"> 0 <div id="text-change"></div> / 03 </div>
+
+      </div>
+
+      </li>
+      <li></li>
+      <li></li>
+    </div>
+    <div class="container">
+      <div class="header h-f">
+        <div class="logo">Logo</div>
+        <div class="menu_trigger">menu</div>
+      </div>
+      <div class="page-content-wrapper">
+        <div class="slider-description-wrapper"></div>
+        <div class="image-wrapper">
+          <div class="your-class">
+            <div>
+              <img
+                src="src/img/markus-spiske-s05XKB6jK2c-unsplash.jpg "
+                alt=""
+                srcset=""
+              />
+            </div>
+            <div>
+              <img
+                src="src/img/markus-spiske-s05XKB6jK2c-unsplash.jpg "
+                alt=""
+                srcset=""
+              />
+            </div>
+            <div>
+              <img
+                src="src/img/markus-spiske-s05XKB6jK2c-unsplash.jpg "
+                alt=""
+                srcset=""
+              />
+            </div>
+          </div>
+        </div>
+        <div class="slider-description-wrapper slider-navigation">
+          <div>
+            <span
+              class="iconify slick-after"
+              data-icon="dashicons:arrow-up-alt2"
+              data-inline="false"
+            ></span>
+          </div>
+          <div>
+            <span
+              class="iconify slick-before"
+              data-icon="dashicons:arrow-down-alt2"
+              data-inline="false"
+            ></span>
+          </div>
+        </div>
+      </div>
+      <div class="footer h-f">
+        <div class="copyright">&copy; 2021</div>
+        <div class="soc">
+          <span
+            ><span
+              class="iconify"
+              data-icon="bx-bxl-instagram"
+              data-inline="false"
+            ></span
+          ></span>
+
+          <span
+            ><span
+              class="iconify"
+              data-icon="bx-bxl-facebook"
+              data-inline="false"
+            ></span
+          ></span>
+        </div>
+      </div>
+    </div>
+  </body>
+  <script src="src/js/jquery.min.js"></script>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.7.0/gsap.min.js"></script>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.7.0/ScrollTrigger.min.js"></script>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/slick-carousel/1.8.1/slick.min.js"></script>
+  <script src="src/js/script.js"></script>
+</html>

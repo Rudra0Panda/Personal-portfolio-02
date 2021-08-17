@@ -1,0 +1,110 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="stylesheet" href="src/css/style.css" />
+    <script src="src/js/jquery.min.js"></script>
+    <link
+      href="//db.onlinewebfonts.com/c/4c4c08af466e9ad071b6d69cf44093df?family=Saol+Display+Regular"
+      rel="stylesheet"
+      type="text/css"
+    />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Poppins:wght@600&display=swap"
+      rel="stylesheet"
+    />
+    <title>Document</title>
+    <style>
+      body {
+        height: 100vh;
+      }
+      .container {
+        padding: 0;
+        height: 100vh;
+      }
+      a {
+        color: #fff;
+      }
+      h1,
+      h2,
+      h3 {
+        color: #fff;
+        font-size: 3rem;
+      }
+      .cursor {
+        opacity: .5;
+        backdrop-filter: invert(1);
+      }
+      .social>a , .email>a {
+        color: #000;
+      }
+      
+    </style>
+  </head>
+  <body>
+    <div class="cursor"></div>
+    <div class="container">
+      <main class="contact-container">
+        <div class="left-contact">
+          <div class="left-contact-top">
+            <h1>
+              We'd love to <br />
+              hear from you.
+            </h1>
+          </div>
+          <div class="left-contact-bottom">
+            <div>
+              <span> <a href="index.html"> Home. &nbsp; </a> </span>
+              <span> <a href="blog.htm"> Blog. &nbsp; </a></span>
+              <span> <a href="work.html"> Work.</a></span>
+            </div>
+          </div>
+        </div>
+
+        <div class="contact-visible">
+          <div class="email">
+            <a class="left" href="mailto:rudrabroker@gmail.com"
+              >rudrabroker@gmail.com</a
+            >
+          </div>
+     
+          <div class="social">
+          
+              <a href="" class="left">Ig.</a>
+              <a href="" class="left">Gh.</a>
+              <a href="" class="left">Fv.</a>
+              <a href="" class="left">Db.</a>
+              <a href="" class="left">Be.</a>
+              <a href="" class="left">Fb.</a>
+          </div>
+          <div class="background-overlay">
+            <div class="square"></div>
+            <div class="square"></div>
+            <div class="square"></div>
+            <div class="square"></div>
+          </div>
+        </div>
+      </main>
+    </div>
+  </body>
+  <script>
+    let Ccursor = document.querySelector(".cursor");
+    window.addEventListener("mousemove", cursor);
+
+    function cursor(e) {
+      Ccursor.style.top = e.pageY + "px";
+      Ccursor.style.left = e.pageX + "px";
+    }
+    $("a , button , .underline  ,.link").mouseover(function () {
+      $(".cursor").addClass("grow");
+      $(".cursor>svg").show();
+      $(".cursor>a").html("click");
+    });
+    $("a , button , .underline , .link ").mouseleave(function () {
+      $(".cursor").removeClass("grow");
+      $(".cursor>svg").hide();
+    });
+  </script>
+</html>
